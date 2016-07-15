@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "generator-star-spacing": 0
+  },
+  "extends": ["vtex"]
+}
