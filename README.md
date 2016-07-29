@@ -1,5 +1,7 @@
 # Lightning talks timer
 
+A very simple lightning talks timer that can be remote-controlled from a mobile device.
+
 URL: https://intense-plateau-58559.herokuapp.com/
 
 ## Usage
