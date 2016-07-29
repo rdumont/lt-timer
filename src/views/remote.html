@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <style>
+    #inputs span {
+      font-size: 400%;
+    }
+    #inputs input {
+      width: 40%;
+      display: inline;
+      font-size: 500%;
+      text-align: center;
+      height: 150%
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <row>
+      <div class="col-lg-12">
+      <form action="#" id="set" class="form-inline text-center">
+        <br>
+        <br>
+        <div id="inputs">
+          <input type="text" id="minutes" value="09" class="form-control input-lg">
+          <span>:</span>
+          <input type="text" id="seconds" value="00" class="form-control input-lg">
+        </div>
+        <br>
+        <br>
+        <p class="text-center">
+          <input type="submit" value="Set" class="btn btn-lg btn-primary">
+          <button id="reset" class="btn btn-lg btn-warning">
+            <i class="glyphicon glyphicon-refresh"></i>
+          </button>
+          <button id="start" class="btn btn-lg btn-success">
+            <i class="glyphicon glyphicon-play"></i>
+            <i class="glyphicon glyphicon-pause"></i>
+          </button>
+        </p>
+      </form>
+      </div>
+    </row>
+  </div>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/axios/0.13.1/axios.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/remote.js"></script>
+</body>
+</html>
