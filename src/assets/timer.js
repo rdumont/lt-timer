@@ -44,11 +44,11 @@
       if (_self.running) {
         clearInterval(_self.interval)
         _self.running = false
-        $('div#indicator').attr('class', 'paused')
+        $('body').attr('class', '')
       } else {
         _self.interval = setInterval(() => _self.update(_self.currentTime - 1), 1000)
         _self.running = true
-        $('div#indicator').attr('class', 'running')
+        $('body').attr('class', 'running')
       }
     }
 
@@ -58,7 +58,7 @@
         clearInterval(_self.interval)
         _self.running = false
       }
-      $('div#indicator').attr('class', 'paused')
+      $('body').attr('class', '')
       _self.update(_self.startTime)
     }
 
@@ -81,7 +81,7 @@
     _self.alarm = () => {
       _self.running = false
       clearInterval(_self.interval)
-      $('div#indicator').attr('class', 'alarm')
+      $('body').attr('class', 'alarm')
       audio.play()
     }
 

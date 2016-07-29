@@ -7,44 +7,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <style>
+    html, body, {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    @keyframes alarm {
+      0% {
+        background-color: rgb(235, 149, 142);
+      }
+      50% {
+        background-color: rgb(201, 48, 44);
+      }
+      100% {
+        background-color: rgb(235, 149, 142);
+      }
+    }
+
+    body {
+      background-color: white;
+    }
+
+    body.alarm {
+      animation: alarm 1s infinite ease-in-out;
+    }
+
+    body.running {
+      background-color: rgb(0, 120, 215);
+    }
+
+    body.running p#timer, body.alarm p#timer {
+      color: white;
+    }
+
     p#timer {
       font-size: 1200%;
-    }
-
-    div#indicator, div#indicator.paused {
-      height: 30px;
-      background-color: #f0ad4e;
-    }
-
-    div#indicator.running {
-      background-color: #449d44;
-    }
-
-    div#indicator.alarm {
-      background-color: #c9302c;
+      font-weight: bold;
+      margin-top: 50%;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div id="indicator"></div>
-    <p id="timer" class="text-center">
-      <span id="minutes">00</span>:<span id="seconds">00</:span>
-    </p>
-    <p class="text-right">
-      <button id="show-code" class="btn btn-default btn-lg glyphicon glyphicon-qrcode"></button>
-    </p>
-    <p id="client-id" class="text-right" style="display: none;">
-      <img><br>
-      <span></span>
-    </p>
-  </div>
-  
+  <p id="timer" class="text-center">
+    <span id="minutes">00</span>:<span id="seconds">00</:span>
+  </p>
+  <p class="text-right">
+    <button id="show-code" class="btn btn-default btn-lg glyphicon glyphicon-qrcode"></button>
+  </p>
+  <p id="client-id" class="text-right" style="display: none;">
+    <img><br>
+    <span></span>
+  </p>
+
   <audio id="myAudio">
     <source src="assets/song.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-
+  
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script type="text/javascript" src="/assets/timer.js"></script>
 </body>
