@@ -5,7 +5,7 @@
     clientId = JSON.parse(message.data).id
     $('#client-id span').text(clientId)
     let url = 'http://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' +
-      window.location.href + '/remote?id=' + clientId
+      window.location.href + 'remote?id=' + clientId
     $('#client-id img').attr('src', url)
   })
 
